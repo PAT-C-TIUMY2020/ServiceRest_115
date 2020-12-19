@@ -18,11 +18,11 @@ namespace ServiceRest_20180140115_NurFajarIsmail
         List<Mahasiswa> GetAllMahasiswa();
 
         [OperationContract]
-        [WebInvoke(UriTemplate = "Mahasiswa/nim={nim}", ResponseFormat = WebMessageFormat.Json)]
+        [WebGet(UriTemplate = "Mahasiswa/nim={nim}", ResponseFormat = WebMessageFormat.Json)]
         Mahasiswa GetMahasiswaByNIM(string nim);
 
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "Mahasiswa", RequestFormat = WebMessageFormat.Json)]
+        [WebInvoke(Method = "POST", UriTemplate = "Mahasiswa", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         string CreateMahasiswa(Mahasiswa mhs);
     
    
